@@ -1,0 +1,33 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    ".babelrc": true,
+    ".cache": true,
+    ".drone.yml": true,
+    ".env": true,
+    ".eslintignore": true,
+    ".eslintrc.js": true,
+    // ".gitignore": true,
+    ".npmrc": true,
+    ".prettierignore": true,
+    ".prettierrc": true,
+    ".psc-ide-port": true,
+    ".psc-package": true,
+    ".pulp-cache": true,
+    ".purs-reple": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "coverage": true,
+    "node_modules": true,
+    "yarn_cache": true,
+    "yarn-error.log": true,
+    "yarn.lock": true
+  },
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "eslint.enable": true
+}

@@ -1,0 +1,44 @@
+{
+  "name": "ps-boilerplate",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently --kill-others \"pulp --watch browserify --standalone main --to output/main.js\" \"parcel index.html\"",
+    "build": "pulp browserify --standalone main --to output/app.js; parcel build src/index.js --experimental-scope-hoisting --out-file dist/index.js --global ps-boilerplate;",
+    "lint:javascript": "eslint .",
+    "precommit": "lint-staged",
+    "prepublish": "npm run build",
+    "test:watch": "jest --watch",
+    "test": "jest --coverage"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.min.js"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint": "^4.19.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.4",
+    "lint-staged": "^7.1.1",
+    "concurrently": "^3.6.0",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.12.1"
+  }
+}
